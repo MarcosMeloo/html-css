@@ -10,7 +10,7 @@
         }
 
         table {
-            width: 500px;
+            width: 600px;
             border-collapse: collapse;
         }
 
@@ -18,10 +18,20 @@
             border: 1px solid black;
             padding: 10px;
         }
+        
+        caption {
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
 
         thead, tfoot {
+            background-color: #383838;
+            color: white;
+        }
+
+        tbody > tr:nth-child(2n) {
             background-color: lightgray;
-            color: black;
         }
 
         th#posicao, .colocacao {
@@ -45,11 +55,12 @@
             TFOOT
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th id="posicao">Posição</th>
-                <th>Estado</th>
-                <th>População</th>
+                <th id="posicao" scope="col">Posição</th>
+                <th scope="col" style="width: 350px">Estado</th>
+                <th scope="col">População</th>
             </tr>
         </thead>
 
@@ -109,7 +120,7 @@
         <tfoot>
             <tr>
                 <td></td>
-                <th id="total">Total de Habitantes</th>
+                <th id="total" scope="row">Total de Habitantes</th>
                 <td class="num"><strong>203 062 512</strong></td>
             </tr>
         </tfoot>
